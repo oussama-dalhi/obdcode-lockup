@@ -13,22 +13,20 @@
 }
 body, html {
   margin: 0;
-  height: 100%;
+  
   background: var(--accent-color);
 }
 
 .container {
     background: var(--accent-color);
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    gap: 5rem;
 }
 header.hero-section {
-    position: sticky;
-    top: 0;
-    z-index: 5;
     background-color: #000;
     text-align: center;
     color: var(--main-color);
@@ -62,10 +60,10 @@ form {
     align-items: center;
 }
 .search {
-    margin: 8rem 0;
+    flex: 1;   
     width: 100%;
     max-width: 700px;
-    min-height: 500px;
+    min-height: 550px;
     border-radius: 2.5rem;
     background-color: var(--main-color);
     display: flex;
@@ -105,7 +103,6 @@ span {
     width: 100%;
     border: 2px solid #1e293b;
     padding: 1rem;
-    /* height: 2.5rem; */
     border-radius: 50px;
     font-size: 2rem;
     font-weight: 500;
@@ -161,67 +158,23 @@ a:hover {
     opacity: 0.9;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     :root {
-        font-size: 14px;
+        font-size: 9px;
     }
-    header.hero-section {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+     header.hero-section {
+    justify-content: center;
+}
+     header.hero-section h1 {
+        display: none;
+        font-size: 2rem;
+     }
+         .logo {
         text-align: center;
+        font-size: 3rem;
+        margin: 0;
     }
-
-    header.hero-section h1 {
-        position: static;
-        transform: none;
-        font-size: 2rem;
-    }
-
-    .logo {
-        margin-left: 0;
-        font-size: 2.5rem;
-    }
-
-    form {
+        form {
         width: 95%;
-    }
-
-    .search {
-        width: 100%;
-        min-height: auto;
-        padding: 2rem 1.5rem;
-        gap: 2.5rem;
-        margin: 4rem 0;
-    }
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .label {
-        font-size: 1.6rem;
-    }
-
-    .search input {
-        font-size: 1.6rem;
-        padding: 1rem;
-    }
-
-    .search-btn {
-        width: 100%;
-        font-size: 1.8rem;
-        padding: 1.2rem 3rem;
-    }
-    .result-field {
-        margin-top: 2rem;
-        gap: 6px;
-    }
-
-    h3,
-    p {
-        font-size: 1.4rem;
-    }
+    } 
 }

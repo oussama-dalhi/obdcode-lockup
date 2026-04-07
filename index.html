@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>OBD-II Fault Code Lookup | Fix Your Car</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="src/script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero-section">
+        <p class="logo">OSDAuto</p>
+        <h1>OBD-II Fault Code Lookup</h1>
+      </header>
+      <form>
+        <div class="search">
+          <div class="input-field">
+            <h2>Diagnose your car instantly</h2>
+            <label for="dtc" class="label"
+              >Search Fault Codes
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
+                <path d="M11 7h2v6h-2zm0 8h2v2h-2z"></path>
+                <path
+                  d="M12 22c5.51 0 10-4.49 10-10S17.51 2 12 2 2 6.49 2 12s4.49 10 10 10m0-18c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8 3.59-8 8-8"
+                ></path>
+              </svg>
+            </label>
+            <input
+              type="text"
+              name="dtc"
+              id="dtc"
+              placeholder="e.g P0300"
+              pattern="[A-Za-z]{1}[0-9]{4}[A-Za-z0-9]*"
+              maxlength="5"
+              required
+            />
+          </div>
+          <div class="btn-field">
+            <button class="search-btn" id="search-button">Scan</button>
+          </div>
+          <div class="result-field"></div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

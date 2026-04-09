@@ -23,6 +23,7 @@ Demo
 ## 📂 Project Structure
 obdcode-lockup/
 │── index.html
+
 │── src/
 │ └── codes.json
 │ └── style.css
@@ -46,7 +47,7 @@ obdcode-lockup/
 1. Clone the repository:
 2. Open the repository: cd obd-project
 2. run index.html
-git clone https://github.com/your-username/obd-project.git
+git clone https://github.com/oussama-dalhi/obdcode-lockup
 
 📈 Future Improvements
   . Add real-time API integration with OBD devices

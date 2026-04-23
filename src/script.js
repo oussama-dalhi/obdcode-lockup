@@ -6,11 +6,12 @@ const allCodes = [];
 fetch(endpoint)
 .then(codes => codes.json())
 .then(data => allCodes.push(...data));
+
 function findMatches(codeToMatch) {
     if(!codeToMatch) return [];
-    const regex = new RegExp(codeToMatch, 'gi');
+    // const regex = new RegExp(codeToMatch, 'gi');
     const matches = allCodes.filter(dtc => {
-        return dtc['Code'].match(regex);
+        return dtc.Code.toUpperCase().includes(codeToMatch);
     });
        const unique = Array.from(
         new Map(matches.map(d => [d.Code, d])).values()
@@ -19,15 +20,16 @@ function findMatches(codeToMatch) {
 }
 
 function displayMatchedCode() {
-    const result = findMatches(searchInput.value.toUpperCase().trim());
+    const dtcValue = searchInput.value.toUpperCase().trim();
+    const result = findMatches(dtcValue);
     if (result.length === 0) {
     resultDisplay.innerHTML = `<p class = 'notfound'>No results found</p>`;
     return;
 }
     const displayHtml = result.map(dtc => {
         return `
-           <h3 class = "code">Fault Code ${dtc['Code']} : <br></h3>
-           <p class = "description">${dtc['Description']}<a href="https://www.google.com/search?q=Fault+Code+${dtc['Code']}" target="_blank">
+           <h3 class = "code">Fault Code ${dtc.Code} : <br></h3>
+           <p class = "description">${dtc.Description}<a href="https://www.google.com/search?q=Fault+Code+${dtc['Code']}" target="_blank">
   Learn more
 </a></p>
         `

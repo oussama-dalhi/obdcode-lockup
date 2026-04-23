@@ -30,6 +30,7 @@
             <label for="dtc" class="label"
               >Search Fault Codes
               <svg
+               aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -45,18 +46,19 @@
             </label>
             <input
               type="text"
-              name="dtc"
               id="dtc"
+              name="dtc"
               placeholder="e.g P0300"
-              pattern="[A-Za-z]{1}[0-9]{4}[A-Za-z0-9]*"
+              pattern="[A-Za-z][0-9]{4}"
               maxlength="5"
               required
+              autocomplete="off"
             />
           </div>
           <div class="btn-field">
-            <button class="search-btn" id="search-button">Scan</button>
+            <button type="submit" class="search-btn" id="search-button">Scan</button>
           </div>
-          <div class="result-field"></div>
+          <section class="result-field" aria-live="polite"></section>
         </div>
       </form>
     </main>

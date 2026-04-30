@@ -1,54 +1,90 @@
-OBD Scanner Web App
 
-A simple web-based OBD (On-Board Diagnostics) scanner that allows users to search and view vehicle diagnostic codes and their meanings.
+# OBD-II Code Lookup Tool
 
-. Features
+A web-based tool for searching and understanding OBD-II diagnostic trouble codes. This project helps users quickly find meanings of error codes used in vehicle diagnostics.
 
-- 🔍 Search OBD-II error codes (e.g. P0171, P0300)
-- 📖 Display code descriptions and explanations
-- ⚡ Fast and responsive UI
-- 🎨 Clean and modern design
-- 📱 Mobile-friendly layout
+---
 
-. Tech Stack
-
-- HTML5
-- CSS3 (Flexbox / Responsive Design)
-- JavaScript (Vanilla JS)
-
-Demo
+## Live Demo
 
 👉 https://oussama-dalhi.github.io/obdcode-lockup/
 
+---
+
+## Features
+
+* 🔍 Search OBD-II error codes (e.g., P0420, P0300)
+* 📖 Display code descriptions and meanings
+* ⚡ Fast lookup using local JSON data
+* 🧠 Simple and intuitive user interface
+* 📱 Lightweight and responsive design
+
+---
+
+## What This Project Demonstrates
+
+* Working with **JSON data**
+* Building a **search/filter system**
+* DOM manipulation and dynamic rendering
+* Handling user input efficiently
+* Structuring a small data-driven application
+
+---
+
+## Tech Stack
+
+* HTML5
+* CSS3
+* JavaScript (ES6+)
+
+---
+
 ## 📂 Project Structure
-obdcode-lockup/
-│── index.html
 
-│── src/
-│ └── codes.json
-│ └── style.css
-│ └── script.js
+```plaintext id="obd12x"
+.
+├── index.html
+├── README.md
+└── src/
+    ├── codes.json
+    ├── script.js
+    └── style.css
+```
 
-. ⚙️ How It Works
+---
 
-1. User enters an OBD code in the input field
-2. The app searches through a dataset of OBD codes
-3. Matching results are displayed instantly
-. What I Learned
+## ⚙️ Getting Started
 
-- Working with JSON data
-- DOM manipulation in JavaScript
-- Building a real-world utility tool
-- Improving UI/UX design
-- Debugging and optimizing search functionality
+```bash id="obd98x"
+git clone https://github.com/oussama-dalhi/obdcode-lockup.git
+cd obdcode-lockup
+```
 
-. Setup & Installation
+Open `index.html` in your browser.
 
-1. Clone the repository:
-2. Open the repository: cd obd-project
-2. run index.html
-git clone https://github.com/oussama-dalhi/obdcode-lockup
+---
 
+## 📸 Screenshots
+![alt text](image.png)
+
+---
+
+##  Future Improvements
+
+* 🏷️ Filter by code category (P, B, C, U)
+* 📚 Add more detailed explanations and fixes
+* 🌐 Multi-language support
+* 📱 Improve mobile UX
+* 🔎 Autocomplete search suggestions
+
+---
+
+## ⚠️ Disclaimer
+
+This tool provides general information about OBD-II codes.
+It should not replace professional vehicle diagnostics.
+
+---
 📈 Future Improvements
   . Add real-time API integration with OBD devices
   . Show more detailed diagnostics
@@ -57,3 +93,12 @@ git clone https://github.com/oussama-dalhi/obdcode-lockup
   . Contributing
 
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
+
+---
+## Acknowledgements
+
+* OBD-II code references and datasets
+* Built as part of learning JavaScript and real-world applications
+
+---
+

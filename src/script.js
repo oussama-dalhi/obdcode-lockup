@@ -9,7 +9,6 @@ fetch(endpoint)
 
 function findMatches(codeToMatch) {
     if(!codeToMatch) return [];
-    // const regex = new RegExp(codeToMatch, 'gi');
     const matches = allCodes.filter(dtc => {
         return dtc.Code.toUpperCase().includes(codeToMatch);
     });

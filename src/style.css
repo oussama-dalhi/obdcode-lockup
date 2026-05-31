@@ -205,13 +205,14 @@ input:focus {
   }
   .fault-header {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
   }
   .fault-code {
-  font-size: 1.5rem;
+  text-align: center;
 }
 .severity {
-  font-size: 0.6;
+  font-size: 0.8rem;
   display: block;
 }
 }
